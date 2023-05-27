@@ -34,6 +34,19 @@ class DoublyLinkedList:
         if self.head is None or self.head == self.tail:
             return
         self.head.value, self.tail.value = self.tail.value, self.head.value
+        
+    def reverse(self):
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        after = temp.next
+        before = None
+
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
 
 dll = DoublyLinkedList(1)
 dll.append(2)
@@ -41,27 +54,29 @@ dll.append(3)
 dll.append(4)
 dll.append(5)
 
-print('DLL before swap_first_last():')
+print('DLL before reverse():')
 dll.print_list()
 
-dll.swap_first_last()
+dll.reverse()
 
-print('\nDLL after swap_first_last():')
+print('\nDLL after reverse():')
 dll.print_list()
 
 """
     EXPECTED OUTPUT:
     ----------------
-    DLL before swap_first_last():
+    DLL before reverse():
     1
     2
     3
     4
+    5
 
-    DLL after swap_first_last():
+    DLL after reverse():
+    5
     4
-    2
     3
+    2
     1
 
 """
