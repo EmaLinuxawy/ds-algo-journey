@@ -9,8 +9,6 @@ This repository documents my learning journey of data structures and algorithms 
 - [Algorithms](#algorithms)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
