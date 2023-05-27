@@ -130,9 +130,6 @@ class DoublyLinkedList:
         self.length -= 1
         return temp
 
-        
-
-
 dll = DoublyLinkedList(11)
 dll.append(3)
 dll.append(23)
