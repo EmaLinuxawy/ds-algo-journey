@@ -127,4 +127,3 @@ linked.append(4)
 linked.reverse()
 
 linked.print_list()
-
